@@ -1,4 +1,4 @@
-package uz.gita.appealsapp.screens
+package uz.gita.appealsapp.ui
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import uz.gita.appealsapp.R
 
 @AndroidEntryPoint
-class InfoAppealScreen : Fragment(R.layout.appeal_info_screen) {
+class ProfileScreen : Fragment(R.layout.profile_screen) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
