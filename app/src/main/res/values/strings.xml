@@ -3,5 +3,6 @@
     <string name="new_appeal_icon_title">New Appeals</string>
     <string name="history_appeal_icon_title">History Appeals</string>
     <string name="profile_icon_title">Profile</string>
-    <string name="phone_number">Phone Number</string>
+    <string name="phone_number_text">Phone Number: </string>
+    <string name="phone_number">+998902307762 </string>
 </resources>
