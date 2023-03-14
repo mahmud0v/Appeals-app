@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newAppealsScreen">
+
+    <fragment
+        android:id="@+id/historyAppealsScreen"
+        android:name="uz.gita.appealsapp.screens.HistoryAppealsScreen"
+        android:label="HistoryAppealsScreen"
+        tools:layout="@layout/history_appeals_screen" >
+        <action
+            android:id="@+id/action_historyAppealsScreen_to_infoAppealScreen"
+            app:destination="@id/infoAppealScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/newAppealsScreen"
+        android:name="uz.gita.appealsapp.screens.NewAppealsScreen"
+        android:label="NewAppealsScreen"
+        tools:layout="@layout/new_appeals_screen" >
+        <action
+            android:id="@+id/action_newAppealsScreen_to_infoAppealScreen"
+            app:destination="@id/infoAppealScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="uz.gita.appealsapp.screens.ProfileScreen"
+        android:label="ProfileScreen"
+        tools:layout="@layout/profile_screen" />
+    <fragment
+        android:id="@+id/infoAppealScreen"
+        android:name="uz.gita.appealsapp.screens.InfoAppealScreen"
+        android:label="InfoAppealScreen"
+        tools:layout="@layout/appeal_info_screen" />
+</navigation>
