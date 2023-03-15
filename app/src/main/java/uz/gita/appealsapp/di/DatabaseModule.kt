@@ -19,7 +19,9 @@ object DatabaseModule {
     @Singleton
     fun provideDatabase(
         @ApplicationContext context: Context
-    ) = Room.databaseBuilder(context, AppealDatabase::class.java, "Appeals.db").build()
+    ) = Room.databaseBuilder(context, AppealDatabase::class.java, "Appeals.db")
+        .createFromAsset("Appeals.db")
+        .build()
 
 
     @Provides

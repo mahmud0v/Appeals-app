@@ -7,8 +7,8 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface AppealDao {
 
-    @Query("select *from Appeal")
-    fun getAllAppeals():Flow<List<AppealEntity>>
+    @Query("select *from Appeals")
+    fun getAllAppeals(): Flow<List<AppealEntity>>
 
 
 }

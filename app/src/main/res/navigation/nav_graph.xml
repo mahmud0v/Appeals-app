@@ -32,5 +32,9 @@
         android:id="@+id/infoAppealScreen"
         android:name="uz.gita.appealsapp.ui.InfoAppealScreen"
         android:label="InfoAppealScreen"
-        tools:layout="@layout/appeal_info_screen" />
+        tools:layout="@layout/appeal_info_screen" >
+        <argument
+            android:name="mySafeArg"
+            app:argType="uz.gita.appealsapp.database.AppealEntity" />
+    </fragment>
 </navigation>

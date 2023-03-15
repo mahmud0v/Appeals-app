@@ -8,4 +8,6 @@ class AppealRepository @Inject constructor(
 ) {
 
     fun getAllRepository() = appealDao.getAllAppeals()
+
+
 }

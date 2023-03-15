@@ -7,7 +7,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="190dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
@@ -21,6 +21,7 @@
             android:background="@drawable/card_back"
 
             >
+
 
             <TextView
                 android:id="@+id/phone_text_id"
@@ -126,10 +127,12 @@
                 android:textColor="@color/white"
                 android:background="@drawable/detail_back"
                 android:textSize="14sp"
+                android:id = "@+id/detail_btn"
                 android:fontFamily="@font/poppins_regular"
                 android:textAllCaps="false"
-                app:layout_constraintTop_toBottomOf="@id/desc_text"
-                app:layout_constraintRight_toRightOf="@id/desc_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="20dp"
 
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>

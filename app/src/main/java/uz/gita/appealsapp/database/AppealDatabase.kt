@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [
-        AppealDao::class
+        AppealEntity::class
     ],
     version = 1
 )
