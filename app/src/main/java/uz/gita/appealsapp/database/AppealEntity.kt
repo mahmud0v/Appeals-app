@@ -20,5 +20,5 @@ data class AppealEntity(
     @ColumnInfo(name = "description")
     val description:String?,
     @ColumnInfo(name = "isAllow")
-    val isAllow:Int?
+    var isAllow:Int?
 ): Parcelable

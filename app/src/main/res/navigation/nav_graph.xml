@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/historyAppealsScreen"
-        android:name="uz.gita.appealsapp.ui.HistoryAppealsScreen"
+        android:name="uz.gita.appealsapp.ui.screen.HistoryAppealsScreen"
         android:label="HistoryAppealsScreen"
         tools:layout="@layout/history_appeals_screen" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/newAppealsScreen"
-        android:name="uz.gita.appealsapp.ui.NewAppealsScreen"
+        android:name="uz.gita.appealsapp.ui.screen.NewAppealsScreen"
         android:label="NewAppealsScreen"
         tools:layout="@layout/new_appeals_screen" >
         <action
@@ -25,12 +25,12 @@
     </fragment>
     <fragment
         android:id="@+id/profileScreen"
-        android:name="uz.gita.appealsapp.ui.ProfileScreen"
+        android:name="uz.gita.appealsapp.ui.screen.ProfileScreen"
         android:label="ProfileScreen"
         tools:layout="@layout/profile_screen" />
     <fragment
         android:id="@+id/infoAppealScreen"
-        android:name="uz.gita.appealsapp.ui.InfoAppealScreen"
+        android:name="uz.gita.appealsapp.ui.screen.InfoAppealScreen"
         android:label="InfoAppealScreen"
         tools:layout="@layout/appeal_info_screen" >
         <argument

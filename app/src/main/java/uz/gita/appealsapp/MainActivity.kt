@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         attachBotNav()
         listenItemClickAction()
-        manageFragment()
 
 
     }
@@ -45,11 +44,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun manageFragment() {
-        val id = navHostFragment.childFragmentManager.fragments[0].id
-        Toast.makeText(this, id, Toast.LENGTH_SHORT).show()
 
-    }
 
 
     private fun showNavBottom() {

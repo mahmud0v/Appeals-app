@@ -1,4 +1,4 @@
-package uz.gita.appealsapp.ui
+package uz.gita.appealsapp.ui.screen
 
 import android.os.Bundle
 import android.view.View

@@ -3,21 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
+
     <ImageView
+        android:id="@+id/back_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/back_icon"
-        android:id="@+id/back_id"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:paddingTop="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
-        android:paddingStart="10dp"
-        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        />
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
@@ -116,16 +115,41 @@
         app:layout_constraintTop_toBottomOf="@id/request_date" />
 
     <TextView
+        android:id="@+id/desc_id"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
-        android:id="@+id/desc_id"
         android:fontFamily="@font/poppins_regular"
         android:text="Namunali xonadonlar sonini oshirish va korxonalar"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@id/desc_text"
         app:layout_constraintTop_toBottomOf="@id/desc_text" />
+
+    <TextView
+        android:id="@+id/allowed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Allowed Condition:"
+        android:textColor="@color/blue_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/desc_text"
+        app:layout_constraintTop_toBottomOf="@id/desc_id" />
+
+    <TextView
+        android:id="@+id/allowed_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Qabul qilindi"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/allowed_text"
+        app:layout_constraintTop_toBottomOf="@id/allowed_text" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -133,7 +157,9 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginBottom="35dp"
-        android:background="@drawable/detail_back"
+        android:background="@drawable/allow_button_back"
+        android:clickable="true"
+        android:focusable="true"
         android:fontFamily="@font/poppins_regular"
         android:text="Allow appeal"
         android:textAllCaps="false"
