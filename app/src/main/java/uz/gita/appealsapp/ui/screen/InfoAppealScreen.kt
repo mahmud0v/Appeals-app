@@ -1,13 +1,16 @@
 package uz.gita.appealsapp.ui.screen
 
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import uz.gita.appealsapp.R
 import uz.gita.appealsapp.database.AppealEntity
@@ -28,11 +31,11 @@ class InfoAppealScreen : Fragment(R.layout.appeal_info_screen) {
         initData()
         back()
         receiveAppeal()
+
     }
 
 
     private fun initData() {
-        itemClick.hideNavBottom()
         infoData = args.mySafeArg
         infoData?.let {
             binding.numberText.text = it.phoneNumber
@@ -52,7 +55,6 @@ class InfoAppealScreen : Fragment(R.layout.appeal_info_screen) {
 
         binding.backId.setOnClickListener {
             findNavController().navigateUp()
-            itemClick.showNavBottom()
         }
 
     }
@@ -62,10 +64,21 @@ class InfoAppealScreen : Fragment(R.layout.appeal_info_screen) {
             if (infoData!!.isAllow != 1) {
                 infoData!!.isAllow = 1
                 viewModel.updateAppeal(infoData!!)
+                binding.allowedTextId.text = LabelWord.allowed
+            } else {
+                showSnackBar(LabelWord.receivedAppeal)
             }
-
         }
     }
+
+    private fun showSnackBar(str: String) {
+        Snackbar.make(binding.allowBtn, str, Snackbar.LENGTH_SHORT).show()
+
+    }
+
+
+
+
 
 
 }

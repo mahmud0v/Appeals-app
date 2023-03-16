@@ -14,7 +14,7 @@ interface AppealDao {
     @Update
     suspend fun updateAppeal(appealEntity: AppealEntity)
 
-    @Query("select *from Appeals where id = 1")
+    @Query("select *from Appeals where isAllow = 1")
     fun getAllowedAppeals(): Flow<List<AppealEntity>>
 
 

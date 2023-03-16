@@ -34,6 +34,7 @@ class NewAppealsScreen : Fragment(R.layout.new_appeals_screen) {
 
 
     private fun loadData() {
+        clickListener.showNavBottom()
         adapter = AppealAdapter(LabelWord.pendingAllowed)
         viewModel.liveData.observe(viewLifecycleOwner, Observer {
             adapter!!.differ.submitList(it)
@@ -51,6 +52,8 @@ class NewAppealsScreen : Fragment(R.layout.new_appeals_screen) {
                     it
                 )
             )
+            clickListener.hideNavBottom()
+
         }
     }
 
@@ -58,6 +61,8 @@ class NewAppealsScreen : Fragment(R.layout.new_appeals_screen) {
     private fun checkNavBottom() {
         clickListener.showNavBottom()
     }
+
+
 
 
 }

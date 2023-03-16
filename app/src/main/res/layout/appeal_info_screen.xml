@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
 
     <ImageView
@@ -44,6 +45,7 @@
         android:fontFamily="@font/poppins_regular"
         android:text="+998902307762"
         android:textSize="16sp"
+        android:textColor="@color/text_def"
         app:layout_constraintLeft_toLeftOf="@id/phone_text_id"
         app:layout_constraintTop_toBottomOf="@id/phone_text_id" />
 
@@ -67,6 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
+        android:textColor="@color/text_def"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_regular"
         android:text="Yunusobod tumani"
@@ -94,6 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/text_def"
         android:fontFamily="@font/poppins_regular"
         android:text="02.09.2023"
         android:textSize="16sp"
@@ -120,6 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/text_def"
         android:fontFamily="@font/poppins_regular"
         android:text="Namunali xonadonlar sonini oshirish va korxonalar"
         android:textSize="16sp"
@@ -144,6 +149,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
+        android:textColor="@color/text_def"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_regular"
         android:text="Qabul qilindi"
