@@ -1,5 +1,7 @@
 package uz.gita.appealsapp.ui.screen
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
@@ -23,7 +25,6 @@ import uz.gita.appealsapp.utils.LabelWord
 class InfoAppealScreen : Fragment(R.layout.appeal_info_screen) {
     private val binding: AppealInfoScreenBinding by viewBinding()
     private val args: InfoAppealScreenArgs by navArgs()
-    private val itemClick: ItemClickSensitivity by activityViewModels()
     private val viewModel: InfoAppealViewModel by viewModels()
     private var infoData: AppealEntity? = null
 
@@ -31,6 +32,7 @@ class InfoAppealScreen : Fragment(R.layout.appeal_info_screen) {
         initData()
         back()
         receiveAppeal()
+        changeBackButton()
 
     }
 
@@ -66,7 +68,7 @@ class InfoAppealScreen : Fragment(R.layout.appeal_info_screen) {
                 viewModel.updateAppeal(infoData!!)
                 binding.allowedTextId.text = LabelWord.allowed
             } else {
-                showSnackBar(LabelWord.receivedAppeal)
+                showSnackBar(requireContext().resources.getString(R.string.snacbar_text))
             }
         }
     }
@@ -76,9 +78,16 @@ class InfoAppealScreen : Fragment(R.layout.appeal_info_screen) {
 
     }
 
-
-
-
+    private fun changeBackButton() {
+        val sharedPreferences =
+            requireContext().getSharedPreferences("mode_shared", Context.MODE_PRIVATE)
+        val mode = sharedPreferences.getString("mode_key", "mode")
+        if (mode == "night") {
+            binding.backId.setImageResource(R.drawable.night_back_icon)
+        }else {
+            binding.backId.setImageResource(R.drawable.back_icon)
+        }
+    }
 
 
 }

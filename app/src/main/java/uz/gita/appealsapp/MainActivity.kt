@@ -1,10 +1,14 @@
 package uz.gita.appealsapp
 
+import android.content.Context
+import android.content.SharedPreferences
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -12,6 +16,8 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import uz.gita.appealsapp.databinding.ActivityMainBinding
 import uz.gita.appealsapp.ui.viewmodel.ItemClickSensitivity
+import uz.gita.appealsapp.utils.LocaleHelper
+import java.util.Locale
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -24,6 +30,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         attachBotNav()
         listenItemClickAction()
+        showLangEvent()
+        checkSystemMode()
 
 
     }
@@ -44,7 +52,11 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-
+    private fun showLangEvent() {
+        val sharedPreferences = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
+        val lang = sharedPreferences.getString("key", "lang")
+        LocaleHelper.changeLanguage(lang!!, this)
+    }
 
 
     private fun showNavBottom() {
@@ -53,6 +65,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun hideNavBottom() {
         binding.botNavView.visibility = View.GONE
+    }
+
+    private fun checkSystemMode() {
+        val sharedPreferences = getSharedPreferences("mode_shared", Context.MODE_PRIVATE)
+        val mode = sharedPreferences.getString("mode_key", "mode")
+        if (mode == "night") {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        }
+
     }
 
 

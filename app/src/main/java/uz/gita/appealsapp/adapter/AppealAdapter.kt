@@ -59,7 +59,7 @@ class AppealAdapter(private val labelType: String) :
             }
             indexText.text = "#".plus(data.id)
             phone.text = data.phoneNumber
-            district.text = data.districtName
+            district.text = trimDistrict(data.districtName!!)
             requestDate.text = data.requestDate
             description.text = trimDescription(data.description!!)
             detailButton.setOnClickListener {
@@ -70,8 +70,12 @@ class AppealAdapter(private val labelType: String) :
         }
 
         private fun trimDescription(string: String): String {
-            return string.substring(0, 22).plus("...")
+            return string.substring(0, 16).plus("...")
 
+        }
+
+        private fun trimDistrict(string: String): String {
+            return string.substring(0, 14).plus("...")
         }
 
     }

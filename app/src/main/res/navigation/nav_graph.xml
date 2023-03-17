@@ -27,7 +27,11 @@
         android:id="@+id/profileScreen"
         android:name="uz.gita.appealsapp.ui.screen.ProfileScreen"
         android:label="ProfileScreen"
-        tools:layout="@layout/profile_screen" />
+        tools:layout="@layout/profile_screen" >
+        <action
+            android:id="@+id/action_profileScreen_to_langListDialog"
+            app:destination="@id/langListDialog" />
+    </fragment>
     <fragment
         android:id="@+id/infoAppealScreen"
         android:name="uz.gita.appealsapp.ui.screen.InfoAppealScreen"
@@ -37,4 +41,9 @@
             android:name="mySafeArg"
             app:argType="uz.gita.appealsapp.database.AppealEntity" />
     </fragment>
+    <dialog
+        android:id="@+id/langListDialog"
+        tools:layout="@layout/dialog_screen"
+        android:name="uz.gita.appealsapp.ui.dialog.LangListDialog"
+        android:label="LangListDialog" />
 </navigation>

@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/item_back_color"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -17,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="History Appeals"
+            android:text="@string/history_appeal_icon_title"
             android:textSize="25sp"
             android:textColor="@color/white"
             android:textStyle="bold"
@@ -39,7 +40,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:id="@+id/history_rv"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="56dp"
 
         />
 
