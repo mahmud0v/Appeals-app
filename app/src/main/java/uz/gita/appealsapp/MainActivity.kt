@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         listenItemClickAction()
         showLangEvent()
         checkSystemMode()
+        btnCheckItemLang()
 
 
     }
@@ -78,6 +79,15 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun btnCheckItemLang(){
+        binding.botNavView.menu.apply {
+            findItem(R.id.newAppealsScreen).title = resources.getString(R.string.new_appeal_icon_title)
+            findItem(R.id.historyAppealsScreen).title = resources.getString(R.string.history_appeal_icon_title)
+            findItem(R.id.profileScreen).title = resources.getString(R.string.profile_icon_title)
+        }
+    }
+
 
 
 }
